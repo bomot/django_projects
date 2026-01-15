@@ -1,0 +1,128 @@
+# Django Projects
+
+[New Project](#new-project)
+  - [VENV](#venv)
+  - [PIP](#pip)
+  - [Django](#django)
+  - [PostgreSQL](#postgresql)
+
+[Nehtový Specialista](#nehtový-specialista)
+
+
+
+## New Project
+
+Терминал в рабочей директории.
+
+`pwd`
+
+`ls`
+
+`touch README.md`
+
+### VENV
+
+Virtual Environment. Изолированное рабочее пространство, содержит копию интерпретатора Python и пакетный менеджер PIP.
+
+`python --version`
+
+`python -m venv .venv`
+
+`source .venv/bin/activate`
+
+### PIP
+
+Package Installer for Python. Система управления программными пакетами.
+
+`pip install --upgrade pip`
+
+`pip install django`
+
+### Django
+
+Фреймворк для разработки веб-приложений.
+
+`django-admin startproject 'name'`
+
+`cd 'name'`
+
+`python manage.py runserver`
+
+`Ctrl + C`
+
+### PostgreSQL
+
+Объектно-реляционная система управления базами данных.
+
+`psql --version`
+
+`psql postgres`
+
+`\du`
+
+`CREATE USER 'name' WITH PASSWORD 'pasword';`
+
+`l`
+
+`CREATE DATABASE 'name' OWNER 'name';`
+
+`\q`
+
+`pip instal psycopg2-binary`
+
+`pip list`
+
+`clear`
+
+
+> project/settings.py
+
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'name',
+        'USER': 'user',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+```
+
+
+`python manage.py migrate`
+
+`rm db.sqlite3`
+
+`python manage.py createsuperuser`
+
+`python manage.py runserver`
+
+
+> http://127.0.0.1:8000/admin
+
+
+### Git
+
+`touch ../.gitignore`
+
+
+> .gitignore
+
+```txt
+.venv
+.DS_Store
+```
+
+
+`cd ..`
+
+`git commit 
+
+
+## Nehtový Specialista
+
+    Á Č Ď É Ě Í Ň Ó Ř Š Ť Ú Ů Ý Ž
+
+    á č ď é ě í ň ó ř š ť ú ů ý ž
