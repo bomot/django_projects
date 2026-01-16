@@ -1,0 +1,178 @@
+@font-face{
+    font-family: "Poppins";
+    src: url(../fonts/Poppins/Poppins-Regular.ttf)
+}
+@font-face {
+    font-family: "Gentium Book Plus";
+    src: url(../fonts/Gentium_Book_Plus/GentiumBookPlus-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Gentium Book Plus";
+    src: url(../fonts/Gentium_Book_Plus/GentiumBookPlus-Italic.ttf);
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Gentium Book Plus";
+    src: url(../fonts/Gentium_Book_Plus/GentiumBookPlus-Bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Gentium Book Plus";
+    src: url(../fonts/Gentium_Book_Plus/GentiumBookPlus-BoldItalic.ttf);
+    font-weight: 700;
+    font-style: italic;
+}
+
+:root{
+    --bg-color: rgb(1, 43, 54);
+    --text-color: rgb(131, 148, 150);
+    --hover-color: rgb(7, 54, 67);
+    --border-color: rgb(3, 64, 83);
+
+    --link-color: rgb(227, 121, 52);
+    --header-color: rgb(140, 160, 165);
+    --attention-color: rgb(211, 54, 130);
+}
+
+h1,
+h2,
+h3{
+    color: var(--header-color);
+}
+
+
+html{
+    background: var(--bg-color);
+    font-family: "Gentium Book Plus";
+    color: var(--text-color);
+    font-size: 1.25em;
+    scroll-behavior: smooth;
+}
+
+body{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+
+header{
+    font-family: "Poppins";
+}
+
+header nav.menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav.menu a.home{
+    padding: 15px 25px;
+    color: var(--link-color);
+    text-underline-offset: 0.1875em;
+    transition: background-color 500ms ease-out;
+}
+header nav.menu a.home:hover{
+    background-color: var(--hover-color);
+}
+
+header nav.menu button{
+    margin: 0;
+    border: none;
+    padding: 0 25px;
+    cursor: pointer;
+    background: 0;
+    transition: background-color 500ms ease-out;
+}
+header nav.menu button:hover{
+    background-color: var(--hover-color);
+}
+
+header nav.menu button svg{
+    display: none;
+    width: 45px;
+    height: 45px;
+}
+header nav.menu button[data-menu="off"] svg.open{
+    display: flex;
+    fill: green;
+}
+header nav.menu button[data-menu="on"] svg.close{
+    display: flex;
+    fill: red;
+}
+
+header nav.menu-list{
+    border-top: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color);
+
+    max-height: 0;
+    overflow: hidden;
+
+    transition: max-height 1s ease-out;
+}
+
+header nav.menu-list ul{
+    width: 60%;
+    margin: 0 auto 1em;
+    padding-inline-start: 0;
+}
+
+header nav.menu-list ul li{
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+}
+
+header nav.menu-list ul li a{
+    flex: 1;
+    text-align: center;
+    padding-block: 0.75em 0.5em;
+    font-size: 0.875em;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: background-color 500ms ease-out;
+}
+header nav.menu-list ul li a:hover{
+    background-color: var(--hover-color);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+main div.overlay{
+    display: none;
+}
+main div.overlay[data-menu="on"]{
+    display: block;
+    position: absolute;
+    inset: 0;
+    background: var(--bg-color);
+    opacity: 0.8;
+}
+
+main div.page-layout{
+    max-width: 824px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+footer{
+    text-align: center;
+    border-top: 4px solid var(--border-color);
+    font-family: "Poppins";
+}
+footer a{
+    display: block;
+    padding-block: 1em;
+    color: var(--link-color);
+    text-underline-offset: 0.1875em;
+    transition: background-color 500ms ease-out;
+}
+footer a:hover{
+    background-color: var(--hover-color);
+}
