@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django_browser_reload',
 
     'pages',
+    'eshop',
 ]
 
 MIDDLEWARE = [

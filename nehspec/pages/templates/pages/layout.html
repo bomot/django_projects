@@ -5,29 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'pages/styles/layout.css' %}">
+    {% block styles %}
+    {% endblock styles %}
     <script src="{% static 'pages/scripts/layout.js' %}" defer></script>
+    {% block scripts %}
+    {% endblock scripts %}
+    {% block title %}
     <title>Bystrová NS: Layout</title>
+    {% endblock title %}
 </head>
 <body>
     <header id="header">
         <nav class="menu">
-            <a class="home" href="#">Domů</a>
-            <button data-menu="off">
+            <a class="home" href="{% url 'home' %}">Domů</a>
+            <button data-menu="off" type="button">
                 <svg class="open" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
                 <svg class="close" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
             </button>
         </nav>
         <nav class="menu-list" data-menu="off">
             <ul>
-                <li><a href="#">Služby</a></li>
-                <li><a href="#">Kontakty</a></li>
-                <li><a href="#">Obchůdek</a></li>
+            {% with current=request.resolver_match.url_name %}
+                {% if current != 'services' %}
+                <li><a href="{% url 'services' %}">Služby</a></li>
+                {% endif %}
+                {% if current != 'contacts' %}
+                <li><a href="{% url 'contacts' %}">Kontakty</a></li>
+                {% endif %}
+                {% if current != 'eshop' %}
+                <li><a href="{% url 'eshop' %}">Obchůdek</a></li>
+                {% endif %}
+            {% endwith %}
             </ul>
         </nav>
     </header>
 
     <main id="main">
         <div class="overlay" data-menu="off"></div>
+        {% block main %}
         <div class="page-layout">
             <h1>Layout</h1>
             <p>This is my Layout Page.</p>
@@ -43,6 +58,7 @@
                 </section>
             </article>
         </div>
+        {% endblock main %}
     </main>
     
     <footer id="footer">

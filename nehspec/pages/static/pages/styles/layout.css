@@ -138,6 +138,7 @@ header nav.menu-list ul li a:hover{
     background-color: var(--hover-color);
 }
 
+
 main{
     display: flex;
     flex-direction: column;
