@@ -27,7 +27,6 @@
     font-style: italic;
 }
 
-
 :root{
     --bg-color: rgb(1, 43, 54);
     --text-color: rgb(131, 148, 150);
@@ -63,20 +62,17 @@ body{
 
 
 header{
-    display: flex;
-    flex-direction: column;
-
     font-family: "Poppins";
 }
 
 header nav.menu{
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    /* justify-content: space-between; */
 }
 
 header nav.menu a.home{
     padding: 0.75em 1em;
-
     color: var(--link-color);
     text-underline-offset: 0.1875em;
     transition: background-color 500ms ease-out;
@@ -86,10 +82,9 @@ header nav.menu a.home:hover{
 }
 
 header nav.menu a.cart{
-    display: flex;
-    align-items: center;
-
-    padding-inline: 20px;
+    /* display: flex; */
+    /* align-self: stretch; */
+    /* align-items: center; */
 
     color: rgb(133, 153, 0);
     text-decoration: none;
@@ -98,22 +93,20 @@ header nav.menu a.cart{
 header nav.menu a.cart:hover{
     background-color: var(--hover-color);
 }
-
 header nav.menu a.cart svg{
+    display: block;
     width: 32px;
     height: 32px;
-
-    fill: rgb(133, 153, 0);
+    fill: rgb(133, 153, 0); 
 }
 
 header nav.menu button{
+    align-self: stretch;
     margin: 0;
     border: none;
-    padding: 0 20px;
-
-    background: none;
-
+    padding: 0;
     cursor: pointer;
+    background: 0;
     transition: background-color 500ms ease-out;
 }
 header nav.menu button:hover{
@@ -122,18 +115,15 @@ header nav.menu button:hover{
 
 header nav.menu button svg{
     display: none;
-
     width: 42px;
     height: 42px;
 }
 header nav.menu button[data-menu="off"] svg.open{
     display: block;
-
     fill: green;
 }
 header nav.menu button[data-menu="on"] svg.close{
     display: block;
-
     fill: red;
 }
 
@@ -149,27 +139,22 @@ header nav.menu-list{
 
 header nav.menu-list ul{
     width: 60%;
-    
     margin: 0 auto 1em;
     padding-inline-start: 0;
 }
 
 header nav.menu-list ul li{
-    display: flex;
-
     border-bottom: 1px solid var(--border-color);
+    display: flex;
 }
 
 header nav.menu-list ul li a{
     flex: 1;
     text-align: center;
-
     padding-block: 0.75em 0.5em;
-
-    color: var(--text-color);
     font-size: 0.875em;
+    color: var(--text-color);
     text-decoration: none;
-
     transition: background-color 500ms ease-out;
 }
 header nav.menu-list ul li a:hover{
@@ -180,30 +165,23 @@ header nav.menu-list ul li a:hover{
 main{
     display: flex;
     flex-direction: column;
-
     position: relative;
 }
-
 main div.overlay{
     display: none;
 }
 main div.overlay[data-menu="on"]{
     display: block;
-
     position: absolute;
     inset: 0;
-
     background: var(--bg-color);
     opacity: 0.8;
 }
 
-main div.page{
+main div.page-layout{
     max-width: 824px;
     width: 100%;
     margin: 0 auto;
-}
-main div.page h1{
-    text-align: center;
 }
 
 

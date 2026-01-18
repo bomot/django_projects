@@ -17,12 +17,21 @@
 <body>
     <header id="header">
         <nav class="menu">
+        {% with current=request.resolver_match.url_name %}
             <a class="home" href="{% url 'home' %}">Domů</a>
+            {% if current == 'eshop' %}
+            <a class="cart" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m480-560-56-56 63-64H320v-80h167l-64-64 57-56 160 160-160 160ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg>
+                0,-
+            </a>
+            {% endif %}
             <button data-menu="off" type="button">
                 <svg class="open" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
                 <svg class="close" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
             </button>
+        {% endwith %}
         </nav>
+
         <nav class="menu-list" data-menu="off">
             <ul>
             {% with current=request.resolver_match.url_name %}
@@ -40,10 +49,12 @@
         </nav>
     </header>
 
+
     <main id="main">
         <div class="overlay" data-menu="off"></div>
+        
         {% block main %}
-        <div class="page-layout">
+        <div class="page layout">
             <h1>Layout</h1>
             <p>This is my Layout Page.</p>
             <article>
@@ -56,11 +67,18 @@
                 <section>
                     <h3>Section h3</h3>
                 </section>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia sed sint debitis commodi minus quod! Nemo cupiditate ex esse nam, neque repellat, veritatis porro harum eligendi aspernatur enim provident.
+                Dolor eveniet, odit nostrum fuga molestias itaque ducimus recusandae quibusdam quae natus labore debitis quidem maiores officiis commodi et corporis maxime odio quisquam sint, repellendus suscipit hic animi. Iure, omnis?
+                Error earum alias, deserunt temporibus maiores, totam, ipsam a sunt quis placeat nemo? Eum nam aliquid blanditiis id, repellendus officia architecto voluptatem esse necessitatibus, perspiciatis eaque modi velit odio odit?
+                Sed doloremque iste aliquam autem reprehenderit suscipit quis error iure omnis. Illum ipsam dignissimos fuga incidunt eligendi, id eaque quibusdam magni aspernatur nobis officia, doloremque eveniet, enim nesciunt magnam libero!
+                Dicta iusto, quo delectus aut quibusdam, optio saepe autem sint distinctio minus enim quos modi nam. Optio sequi perspiciatis provident. Quaerat totam et tempora sapiente, dicta non laboriosam accusantium at.</p>
             </article>
         </div>
         {% endblock main %}
     </main>
     
+
     <footer id="footer">
         <a href="#header">Zpět nahoru</a>
     </footer>
