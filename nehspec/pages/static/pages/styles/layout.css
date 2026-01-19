@@ -100,8 +100,8 @@ header nav.menu a.cart:hover{
 }
 
 header nav.menu a.cart svg{
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
 
     fill: rgb(133, 153, 0);
 }

@@ -1,4 +1,42 @@
-div.page-services h1{
-    text-align: center;
-    color: green;
+
+div.page.services article.main section h3{
+    padding-block: 0.25em;
+    padding-inline-start: 0.5em;
+
+    background-color: var(--hover-color);
+}
+/* div.page.services article.main section.package-deal h3{
+    color: rgb(133, 153, 0);
+}
+div.page.services article.main section.manicure h3{
+    color: rgb(42, 161, 153);
+}
+div.page.services article.main section.pedicure h3{
+    color: rgb(38, 139, 211);
+} */
+
+div.page.services article.main section ol{
+    padding-inline-end: 10px;    
+}
+
+/* div.page.services article.main section.package-deal ol > li:nth-child(1){
+    color: rgb(188, 131, 131)
+}
+div.page.services article.main section.package-deal ol > li:nth-child(2){
+    color: rgb(176, 96, 176);
+}
+div.page.services article.main section.package-deal ol > li:nth-child(3){
+    color: rgb(181, 154, 0);
+} */
+
+div.page.services article.main section ol li div{
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 1px dotted var(--border-color);
+}
+
+div.page.services article.main section ol li ul li{
+    font-style: italic;
+    font-size: 0.875em;
 }
