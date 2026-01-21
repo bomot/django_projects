@@ -79,6 +79,7 @@ header nav.menu a.home{
 
     color: var(--link-color);
     text-underline-offset: 0.1875em;
+    
     transition: background-color 500ms ease-out;
 }
 header nav.menu a.home:hover{
@@ -93,6 +94,7 @@ header nav.menu a.cart{
 
     color: rgb(133, 153, 0);
     text-decoration: none;
+
     transition: background-color 500ms ease-out;
 }
 header nav.menu a.cart:hover{
@@ -100,8 +102,10 @@ header nav.menu a.cart:hover{
 }
 
 header nav.menu a.cart svg{
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
+
+    margin-inline-end: 2px;
 
     fill: rgb(133, 153, 0);
 }
@@ -138,12 +142,12 @@ header nav.menu button[data-menu="on"] svg.close{
 }
 
 header nav.menu-list{
-    border-top: 2px solid var(--border-color);
-    border-bottom: 2px solid var(--border-color);
-
     max-height: 0;
     overflow: hidden;
-
+    
+    border-bottom: 2px solid var(--border-color);
+    border-top: 2px solid var(--border-color);
+    
     transition: max-height 1s ease-out;
 }
 
@@ -209,14 +213,19 @@ main div.page h1{
 
 footer{
     text-align: center;
+
     border-top: 4px solid var(--border-color);
+
     font-family: "Poppins";
 }
 footer a{
     display: block;
+
     padding-block: 1em;
+
     color: var(--link-color);
     text-underline-offset: 0.1875em;
+
     transition: background-color 500ms ease-out;
 }
 footer a:hover{

@@ -1,0 +1,20 @@
+{% extends 'pages/layout.html' %}
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'products/styles/products.css' %}">
+{% endblock styles %}
+
+{% block title %}
+<title>Bystrová NS: Produkty</title>
+{% endblock title %}
+
+{% block main %}
+<div class="page products">
+    <h1>Produkty</h1>
+    <ol class="category">
+        <li><a href="#">Kosmetika</a></li>
+        <li><a href="#">Rakousko</a></li>
+    </ol>
+</div>
+{% endblock main %}

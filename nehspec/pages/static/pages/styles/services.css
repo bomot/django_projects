@@ -15,6 +15,10 @@ div.page.services article.main section.pedicure h3{
     color: rgb(38, 139, 211);
 } */
 
+div.page.services article.main section h3 span{
+    margin-inline-end: 0.3125em;
+}
+
 div.page.services article.main section ol{
     padding-inline-end: 10px;    
 }

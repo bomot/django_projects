@@ -16,20 +16,32 @@
 
     <article class="main">
         <h2>Jak na to</h2>
-        <ol class="how-it-works">
-            <li>Vyber kategorii.</li>
-            <li>Přidej zboží do košíku.</li>
+        <ol class="instruction-steps">
+            <li>Přejděte do kategorie.</li>
+            <li>Přidejte zboží do košíku.</li>
             <li>
-                A poté v košíku dokončí objednávku.
-                <ul><li>košík je nahoře uprostřed</li></ul>
+                V košíku dokončíte objednávku.
+                <ul>
+                    <li>košík je nahoře uprostřed</li>
+                </ul>
             </li>
         </ol>
 
         <section class="category">
             <h3>Kategorie</h3>
             <ol>
-                <li><a href="#">Kosmetika</a></li>
-                <li><a href="#">Rakousko</a></li>
+                <li><a href="{% url 'products' %}">Kosmetika</a></li>
+                <li><a href="{% url 'products' %}">Rakousko</a></li>
+            </ol>
+        </section>
+
+        <section class="how-it-works">
+            <h3>Jak to funguje</h3>
+            <p>Tenhle obchůdek je hlavně pro moje stálé zákazníky, ale pokud jste sem zavítali náhodou a chcete si něco objednat, mrkněte níže, jak to celé funguje.</p>
+            <ol>
+                <li>Zboží si můžete vyzvednout na místě, kde probíhají služby, a to v pracovní době.</li>
+                <li>Minimálně den před vyzvednutím mi prosím pošlete jednoduchou SMS ve tvaru: PIN, DEN (např. 4343, zítra).</li>
+                <li>Objednávky z kategorie Rakousko sbírám vždy do 25. dne v měsíci a od 1. už si můžete zboží vyzvednout.</li>
             </ol>
         </section>
     </article>

@@ -1,0 +1,45 @@
+div.page.products h2{
+    padding-block: 0.25em;
+    padding-inline-start: 0.5em;
+
+    background-color: var(--hover-color);
+}
+
+div.page.products ol.category{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    padding-inline: 20px;
+
+    font-family: "Poppins";
+}
+
+div.page.products ol.category li{
+    display: flex;
+    justify-content: center;
+
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+}
+
+div.page.products ol.category li a{
+    flex: 1;
+    text-align: center;
+
+    padding-block: 0.5em;
+
+    color: var(--link-color);
+    font-size: 0.875em;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition: background-color 500ms ease-out;
+}
+div.page.products ol.category li a:hover{
+    background-color: var(--hover-color);
+}
+div.page.products ol.category li:first-of-type a{
+    color: green;
+}
+
